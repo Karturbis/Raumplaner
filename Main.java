@@ -92,7 +92,15 @@ public class Main {
 
         for(int i = 0; i < 2; i++){
 
-            a1tArrayList.add(a1t + i);
+            a1tArrayList.add(new Tisch());
+            System.out.println("Log: Tisch " + i + " erstellt.");
+        }
+
+        System.out.println("");
+
+        for(int i = 0; i < 8; i++){
+            a1sArrayList.add(new Stuhl());
+            System.out.println("Log: Stuhl " + i + " erstellt");
         }
 
     }
