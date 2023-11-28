@@ -114,6 +114,8 @@ public class Main {
         for (Tisch tisch : a1tArrayList) {
             tisch.zeige();
         }
+
+        //TODO: position tables and chairs in right place and roatation
     }
 
 
