@@ -90,32 +90,27 @@ public class Main {
      */
     public void a1(){
 
-        // for loop that creates the Tisch objects and writes these into the a1t Arraylist
+        // for loop that creates the Tisch objects and writes these into the a1t Arraylist and makes them visible
         for(int i = 0; i < 2; i++){
 
             a1tArrayList.add(new Tisch());
+            a1tArrayList.get(i).zeige();
             System.out.println("Log: Tisch " + i + " erstellt.");
         }
 
         System.out.println("");
 
-        // for loop that creates the Stuhl objects and writes these into the a1s Arraylist
+        // for loop that creates the Stuhl objects and writes these into the a1s Arraylist and makes them visible
         for(int i = 0; i < 8; i++){
+
             a1sArrayList.add(new Stuhl());
+            a1sArrayList.get(i).zeige();
             System.out.println("Log: Stuhl " + i + " erstellt");
         }
 
-        // makes the all Stuhl objects in the Arralist a1s visible
-        for (Stuhl stuhl : a1sArrayList) {
-            stuhl.zeige();  
-        }
-
-        // makes the all Tisch objects in the Arralist a1t visible
-        for (Tisch tisch : a1tArrayList) {
-            tisch.zeige();
-        }
-
         //TODO: position tables and chairs in right place and roatation
+
+        a1tArrayList.get(0).bewegeHorizontal(200);
     }
 
 
