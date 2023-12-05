@@ -94,6 +94,16 @@ public class Stuhl
         xPosition += entfernung;
         zeichne();
     }
+
+    /*
+     * Setzt die X-Koordinate auf 'xPosition'
+     * @param int xPosition
+     */
+    public void set_xPosition(int xPosition){
+        loesche();
+        this.xPosition = xPosition;
+        zeichne();
+    }
     
     /**
      * Bewege dieses objekt vertikal um 'entfernung' Bildschirmpunkte.
@@ -104,6 +114,15 @@ public class Stuhl
         zeichne();
     }
     
+    /*
+     * Setzt die Y-Koordinate auf 'yPosition'
+     * @param int yPosition
+     */
+    public void set_yPosition(int yPosition){
+        loesche();
+        this.yPosition = yPosition;
+        zeichne();
+    }
     
     /**
      * Aendere die Farbe dieses Objektes in 'neueFarbe'.

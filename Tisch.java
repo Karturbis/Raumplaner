@@ -21,7 +21,7 @@ public class Tisch
     
     
     /**
-     * Erzeuge einen neuen Stuhl mit einer Standardfarbe und Standardgroesse
+     * Erzeuge einen neuen Tisch mit einer Standardfarbe und Standardgroesse
      * an einer Standardposition. (Standardkonstruktor)
      */
     public Tisch()  {
@@ -33,10 +33,25 @@ public class Tisch
         breite = 120;
         tiefe  = 100;
     }
+
+
+    /*
+     * Erzeuge einen neuen Tisch, mit einer Ã¼bergebenen position (Custom Konstruktor)
+     * @param int xPosition, int yPosition
+     */
+    public Tisch(int xPosition, int yPosition){
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+        orientierung = 0;
+        farbe = "rot";
+        istSichtbar = false;
+        breite = 120;
+        tiefe = 100;
+    }
     
     /**
      * Berechnet das zu zeichnende Shape anhand der gegebenen Daten
-     * [ Zum Anzeigen der Attributwerte über Inspect muss hier die Sichtbarkeit 
+     * [ Zum Anzeigen der Attributwerte ueber Inspect muss hier die Sichtbarkeit 
      *  auf public gesetzt werden. ]
      */
     private Shape gibAktuelleFigur()
@@ -86,6 +101,26 @@ public class Tisch
     public void bewegeHorizontal(int entfernung) {
         loesche();
         xPosition += entfernung;
+        zeichne();
+    }
+
+    /*
+     * Setzt die X-Koordinate auf 'xPosition'
+     * @param int xPosition
+     */
+    public void set_xPosition(int xPosition){
+        loesche();
+        this.xPosition = xPosition;
+        zeichne();
+    }
+
+    /*
+     * Setzt die Y-Koordinate auf 'yPosition'
+     * @param int yPosition
+     */
+    public void set_yPosition(int yPosition){
+        loesche();
+        this.yPosition = yPosition;
         zeichne();
     }
     

@@ -110,7 +110,14 @@ public class Main {
 
         //TODO: position tables and chairs in right place and roatation
 
-        a1tArrayList.get(0).bewegeHorizontal(200);
+        //Platzierung der Tische und Stühle
+        a1tArrayList.get(0).set_xPosition(120);
+        a1tArrayList.get(0).set_yPosition(42);
+
+        a1tArrayList.get(1).set_xPosition(200);
+        a1tArrayList.get(1).set_yPosition(220);
+
+        a1sArrayList.get(0).bewegeHorizontal(100);
     }
 
 
