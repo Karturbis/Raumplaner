@@ -16,17 +16,17 @@ import javax.swing.JPanel;
 
 /**
  * Leinwand ist eine Klasse, die einfache Zeichenoperationen auf einer
- * leinwandartigen Zeichenfl�che erm�glicht.
- * Sie ist eine vereinfachte Version der Klasse Canvas (englisch f�r 
- * Leinwand) des JDK und wurde speziell f�r das Projekt "Figuren"
+ * leinwandartigen Zeichenflaeche ermoeglicht.
+ * Sie ist eine vereinfachte Version der Klasse Canvas (englisch fuer 
+ * Leinwand) des JDK und wurde speziell fuer das Projekt "Figuren"
  * geschrieben.
  * 
  *
  * @author: Bruce Quig
- * @author: Michael K�lling (mik)
+ * @author: Michael Koelling (mik)
  * @author: Axel Schmolitzky
  * 
- * @author: �nderungen von
+ * @author: aenderungen von
  * @Java-MS Groupies
  * @hier: Uwe Debacher
  *
@@ -35,7 +35,7 @@ import javax.swing.JPanel;
 public class Leinwand
 {
   // Hinweis: Die Implementierung dieser Klasse (insbesondere die
-  // Verwaltung der Farben und Identit�ten der Figuren) ist etwas
+  // Verwaltung der Farben und Identitaeten der Figuren) ist etwas
   // komplizierter als notwendig. Dies ist absichtlich so, weil damit 
   // die Schnittstellen und Exemplarvariablen der Figuren-Klassen
   // fuer den Lernanspruch dieses Projekts einfacher und klarer
@@ -98,8 +98,8 @@ public class Leinwand
    * Vordergrund geholt. Diese Operation kann auch benutzt werden, um 
    * ein bereits sichtbares Leinwandfenster in den Vordergrund (vor
    * andere Fenster) zu holen.
-   * @param sichtbar boolean f�r die gew�nschte Sichtbarkeit: 
-   * true f�r sichtbar, false f�r nicht sichtbar.
+   * @param sichtbar boolean fuer die gewuenschte Sichtbarkeit: 
+   * true fuer sichtbar, false fuer nicht sichtbar.
    */
   public void setzeSichtbarkeit(boolean sichtbar)
   {
@@ -129,7 +129,7 @@ public class Leinwand
   public void zeichne(Object figur, String farbe, Shape shape)
   {
     figuren.remove(figur); // entfernen, falls schon eingetragen
-    figuren.add(figur); // am Ende hinzuf�gen
+    figuren.add(figur); // am Ende hinzufuegen
     figurZuShape.put(figur, new ShapeMitFarbe(shape, farbe));
     erneutZeichnen();
   }
@@ -171,9 +171,9 @@ public class Leinwand
   }
 
   /**
-   * Warte f�r die angegebenen Millisekunden.
-   * Mit dieser Operation wird eine Verz�gerung definiert, die
-   * f�r animierte Zeichnungen benutzt werden kann.
+   * Warte fuer die angegebenen Millisekunden.
+   * Mit dieser Operation wird eine Verzoegerung definiert, die
+   * fuer animierte Zeichnungen benutzt werden kann.
    * @param  millisekunden die zu wartenden Millisekunden
    */
   public void warte(int millisekunden)
