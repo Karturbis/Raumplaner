@@ -38,8 +38,8 @@ public class Leinwand
   // Verwaltung der Farben und Identit�ten der Figuren) ist etwas
   // komplizierter als notwendig. Dies ist absichtlich so, weil damit 
   // die Schnittstellen und Exemplarvariablen der Figuren-Klassen
-  // f�r den Lernanspruch dieses Projekts einfacher und klarer
-  // sein k�nnen.
+  // fuer den Lernanspruch dieses Projekts einfacher und klarer
+  // sein koennen.
 
   private static Leinwand leinwandSingleton;
 
@@ -54,7 +54,7 @@ public class Leinwand
     if (leinwandSingleton == null)
     {
       leinwandSingleton =
-        new Leinwand("M�belprojekt Grafik", 400, 400, Color.white);
+        new Leinwand("Möbelprojekt Grafik", 800, 800, Color.white);
     }
     leinwandSingleton.setzeSichtbarkeit(true);
     return leinwandSingleton;
