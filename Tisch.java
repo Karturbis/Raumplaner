@@ -126,6 +126,7 @@ public class Tisch
     
     /**
      * Bewege dieses objekt vertikal um 'entfernung' Bildschirmpunkte.
+     * @param entfernung
      */
     public void bewegeVertikal(int entfernung) {
         loesche();
@@ -133,11 +134,28 @@ public class Tisch
         zeichne();
     }
     
+    /**
+     * Methode zum berechnen des Mittelpunktes, gibt einen Integer zurück.
+     * @return xmittelpunkt
+     */
+    public int get_xMittelpunkt(){
+        return (xPosition + (breite/2));
+    }
+
+    /**
+     * Methode zum berechnen des Mittelpunktes, gibt einen Integer zurück.
+     * @return ymittelpunkt
+     */
+    public int get_yMittelpunkt(){
+        return (yPosition + (tiefe/2));
+
+    }
     
     /**
      * Aendere die Farbe dieses Objektes in 'neueFarbe'.
      * Gueltige Angaben sind "rot", "gelb", "blau", "gruen",
      * "lila" und "schwarz".
+     * @param neueFarbe
      */
     public void aendereFarbe(String neueFarbe) {
         loesche();

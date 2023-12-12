@@ -34,6 +34,23 @@ public class Stuhl
         breite = 40;
         tiefe  = 40;
     }
+
+    /**
+     * Alternativer Konstruktor der Klasse Stuhl.
+     * @param xPosition
+     * @param yPosition
+     * @param orientierung
+     */
+    public Stuhl(int xPosition, int yPosition, int orientierung) {
+        
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+        farbe = "blau";
+        this.orientierung = orientierung;
+        istSichtbar = false;
+        breite = 40;
+        tiefe = 40;
+    }
     
     /**
      * Berechnet das zu zeichnende Shape anhand der gegebenen Daten

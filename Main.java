@@ -7,20 +7,18 @@ import java.util.ArrayList;
 public class Main {
     //Class variables:
     ArrayList<String> commands = new ArrayList<String>();
-    ArrayList<Stuhl> a1sArrayList = new ArrayList<Stuhl>();
-    ArrayList<Tisch> a1tArrayList = new ArrayList<Tisch>();
-
 
     /*
      * The main method
      */
     public static void main(String[] args) {
-
+        
         Main main = new Main();
 
         main.commands.add("help");
         main.commands.add("quit");
         main.commands.add("aufgabe1");
+        main.commands.add("clear");
         //TODO: add new commands to the commands arraylist.
 
         main.clui();
@@ -31,35 +29,53 @@ public class Main {
      */
     public void clui(){
 
-        String command = "";
+        String[] command = {"h", "none"};
         Scanner input = new Scanner(System.in);
         help();
 
-        while (!command.equals("q")) {
+        while (!command[0].equals("q")) {
 
             System.out.print(">> ");
-            command = input.nextLine(); 
+            String[] optionStringstmp = input.nextLine().toLowerCase().split(" ");
+            if(optionStringstmp.length < 2){
+                String[] x = {optionStringstmp[0], "none"}; // used help variable x, because curly brackets are only allowed on array initialisations.
+                command = x;
+            }
+            else{
+                command = optionStringstmp;
+            }
 
-            switch (command) {
+
+
+            switch (command[0]) {
                 case "?":
                 case "help":
                 case "h":
                     help();
                     break;
 
-                case "q":
                 case "exit":
                 case "quit":
-                    command = "q";
+                    command[0] = "q";
                     break;
                 
                 case "a1":
                 case "aufgabe1":
-                    a1();
+                    try {
+                        a1(Integer.parseInt(command[1]), Integer.parseInt(command[2]));
+                    } catch (Exception e) {
+                       System.out.println("Please type in 'a1', followed by the xPoition and the yPosition, seperated by a ' '.");
+                    }
+                    
                     break;
             
-                case"command":
+                case "command":
                     //TODO: implement commands
+                    break;
+                
+                case "clear":
+                case "cls":
+                    //TODO implement method to clear the canvas
                     break;
                     
                 case "":
@@ -68,7 +84,6 @@ public class Main {
                 default:
                     System.out.println("The input could not be processed.");
             }
-
         }
 
         input.close();
@@ -88,36 +103,10 @@ public class Main {
     /*
      * method for task 1, creates all needed furniture and puts it into the right place
      */
-    public void a1(){
+    public void a1(int xPosition, int yPosition){
 
-        // for loop that creates the Tisch objects and writes these into the a1t Arraylist and makes them visible
-        for(int i = 0; i < 2; i++){
-
-            a1tArrayList.add(new Tisch());
-            a1tArrayList.get(i).zeige();
-            System.out.println("Log: Tisch " + i + " erstellt.");
-        }
-
-        System.out.println("");
-
-        // for loop that creates the Stuhl objects and writes these into the a1s Arraylist and makes them visible
-        for(int i = 0; i < 8; i++){
-
-            a1sArrayList.add(new Stuhl());
-            a1sArrayList.get(i).zeige();
-            System.out.println("Log: Stuhl " + i + " erstellt");
-        }
-
-        //TODO: position tables and chairs in right place and roatation
-
-        //Platzierung der Tische und Stühle
-        a1tArrayList.get(0).set_xPosition(120);
-        a1tArrayList.get(0).set_yPosition(42);
-
-        a1tArrayList.get(1).set_xPosition(200);
-        a1tArrayList.get(1).set_yPosition(220);
-
-        a1sArrayList.get(0).bewegeHorizontal(100);
+    new Tischgruppe().new_tischgruppe(xPosition, yPosition);
+    
     }
 
 
