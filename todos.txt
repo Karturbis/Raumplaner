@@ -1,0 +1,44 @@
+Aufgabe 1:
+• Erstelle zwei Tische mit jeweils vier Stühlen darum.
+• Beobachte dabei, was bei der Arbeit an dieser Aufgabe auf unbefriedigende
+Funktionalität hindeutet.
+• Formuliere Anforderungen an die Funktionalität.
+• Versuche die Klassen um diese Funktionalität zu erweitern.
+
+Aufgabe 2:
+• Fügen Sie in das Projekt die neue Klasse Moebel ein und passen Sie die von Ihnen
+    erstellten Klassen an.
+• Versuchen Sie den Unterschied zwischen den beiden Beziehungstypen im
+    Programmtext zu finden und ihn sprachlich zu beschreiben.
+
+Aufgabe 3:
+Untersuchen Sie die folgenden Beispiele daraufhin, ob sie Assoziationen, Aggregationen
+oder Kompositionen enthalten:
+• Eine Sitzgruppe, bestehend aus einem quadratischen Tisch und vier Stühlen.
+• Eine Duschwanne, bestehend aus drei Quadraten
+• Ein Kochherd, der einen Benutzer benötigt.
+• Ein Kochherd, der eine Küche benötigt.
+• Auto, Fahrrad, Fahrzeug, PKW, LKW, Reifen, Türen, Fahrer
+Zeichnen Sie die zugehörigen UML – Diagramme (auch in BlueJ – Variante)!
+
+Aufgabe 4:
+Schreiben Sie eine Methode contains(obj), die der Methode der folgenden
+Klassendefinition von LinkedList aus der Javadoc entspricht:
+contains
+public boolean contains(Object obj)
+Returns true if this list contains the specified element. More
+formally, returns true if and only if this list contains at least
+one element e such that (obj==null ? e==null : o.equals(e)).
+Specified by: contains in interface Collection<E>
+Specified by: contains in interface List<E>
+Overrides: contains in class AbstractCollection<E>
+Parameters:
+o - element whose presence in this list is to be tested.
+Returns:
+true if this list contains the specified element.
+(und ich ergänze:) false if it does not.
+
+Aufgabe 7:
+Andere Beispiele von Vererbung und Polymorphie finden sich bei unseren Zählerklassen.
+Beschreiben Sie Vererben, Überschreiben und Polymorphie am Beispiel der
+Zählerklassen.
