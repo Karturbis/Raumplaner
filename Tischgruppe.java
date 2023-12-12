@@ -9,7 +9,7 @@ public class Tischgruppe {
     /**
      * erstellen einer Tischgruppe
      */
-    public void new_tischgruppe(int xPosition, int yPosition){
+    public Tischgruppe(int xPosition, int yPosition){
 
         Tisch tisch = new Tisch(xPosition, yPosition);
         tisch.zeige();
