@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/*
+/**
  * Main class, contains the main method which is executed by running the program
  */
 public class Main {
