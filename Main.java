@@ -18,7 +18,7 @@ public class Main {
 
         main.commands.add("help");
         main.commands.add("quit");
-        main.commands.add("aufgabe1");
+        main.commands.add("Tischgruppe");
         main.commands.add("clear");
         //TODO: add new commands to the commands arraylist.
 
@@ -60,12 +60,12 @@ public class Main {
                     command[0] = "q";
                     break;
                 
-                case "a1":
-                case "aufgabe1":
+                case "tg":
+                case "tischgruppe":
                     try {
                         new Tischgruppe(Integer.parseInt(command[1]), Integer.parseInt(command[2]));
                     } catch (Exception e) {
-                       System.out.println("Please type in 'a1', followed by the xPoition and the yPosition, seperated by a ' '.");
+                       System.out.println("Please type in 'tg', followed by the xPoition and the yPosition, seperated by a ' '.");
                     }
                     
                     break;

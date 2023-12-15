@@ -1,5 +1,7 @@
 /**
  * Klasse einer Tischgruppe, also ein Tisch mit vier Stühlen
+ * @author Lukas
+ * @version 1202312151004
  */
 public class Tischgruppe {
     public int[] xVerschiebung = {-120, 80, -20, -20};
