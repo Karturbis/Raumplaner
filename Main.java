@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-//TODO: importieren und verstehen von Hashmap um den Userinput, zu einem Objekt zuzuordnen.
 
 /*
  * Main class, contains the main method which is executed by running the program
@@ -19,9 +18,6 @@ public class Main {
         main.commands.add("help");
         main.commands.add("quit");
         main.commands.add("Tischgruppe");
-        main.commands.add("clear");
-        //TODO: add new commands to the commands arraylist.
-
         main.clui();
     }
     
@@ -69,16 +65,7 @@ public class Main {
                     }
                     
                     break;
-            
-                case "command":
-                    //TODO: implement commands
-                    break;
-                
-                case "clear":
-                case "cls":
-                    //TODO implement method to clear the canvas
-                    break;
-                    
+        
                 case "":
                     break;
 
