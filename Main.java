@@ -75,6 +75,7 @@ public class Main {
         }
 
         input.close();
+        System.exit(0);
     }
 
     /*
