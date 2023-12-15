@@ -63,7 +63,7 @@ public class Main {
                 case "a1":
                 case "aufgabe1":
                     try {
-                        a1(Integer.parseInt(command[1]), Integer.parseInt(command[2]));
+                        new Tischgruppe(Integer.parseInt(command[1]), Integer.parseInt(command[2]));
                     } catch (Exception e) {
                        System.out.println("Please type in 'a1', followed by the xPoition and the yPosition, seperated by a ' '.");
                     }
@@ -101,19 +101,6 @@ public class Main {
             
         }
     }
-    /*
-     * method for task 1, creates all needed furniture and puts it into the right place
-     */
-    public void a1(int xPosition, int yPosition){
-
-    Tischgruppe tisch1Tischgruppe = new Tischgruppe(xPosition, yPosition);
-
-    
-    }
-
-
-
-
 }
 
 
