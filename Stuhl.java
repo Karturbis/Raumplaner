@@ -10,24 +10,7 @@ import java.awt.geom.AffineTransform;
  * @author Claus Albowski, edited by Lukas
  * @version 1202311281506
  */
-public class Stuhl extends Moebel
-{
-    
-
-    /**
-     * Erzeuge einen neuen Stuhl mit einer Standardfarbe und Standardgroesse
-     * an einer Standardposition. (Standardkonstruktor)
-     */
-    public Stuhl() {
-        xPosition = 160;
-        yPosition = 80;
-        farbe = "blau";
-        orientierung = 0;
-        istSichtbar = false;
-        breite = 40;
-        tiefe  = 40;
-    }
-
+public class Stuhl extends Moebel{
     /**
      * Alternativer Konstruktor der Klasse Stuhl.
      * @param xPosition
@@ -35,12 +18,10 @@ public class Stuhl extends Moebel
      * @param orientierung
      */
     public Stuhl(int xPosition, int yPosition, int orientierung) {
-        
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
+       
+        super(yPosition, xPosition);
         farbe = "blau";
         this.orientierung = orientierung;
-        istSichtbar = false;
         breite = 40;
         tiefe = 40;
     }

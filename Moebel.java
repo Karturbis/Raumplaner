@@ -16,6 +16,13 @@ public abstract class Moebel {
     protected int breite;
     protected int tiefe;
 
+    public Moebel(int yPosition, int xPosition){
+
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+        istSichtbar = false;
+    }
+
     /**
      * Diese methode wird in den Unterklassen ueberschrieben, ist aber notwendig, weil Java
      * sie an dieser Stelle verlangt.
@@ -51,7 +58,7 @@ public abstract class Moebel {
 
     /**
      * Bewege dieses Objekt horizontal um 'entfernung' Bildschirmpunkte.
-     * @param entfernung
+     * @param int entfernung
      */
     public void bewegeHorizontal(int entfernung) {
         loesche();

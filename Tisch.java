@@ -11,32 +11,16 @@ import java.awt.geom.Ellipse2D;
  */
 public class Tisch extends Moebel {
 
-    /**
-     * Erzeuge einen neuen Tisch mit einer Standardfarbe und Standardgroesse
-     * an einer Standardposition. (Standardkonstruktor)
-     */
-    public Tisch()  {
-        xPosition = 120;
-        yPosition = 150;
-        orientierung = 0;
-        farbe = "rot";
-        istSichtbar = false;
-        breite = 120;
-        tiefe  = 100;
-    }
-
 
     /**
      * Erzeuge einen neuen Tisch, mit einer übergebenen position (Custom Konstruktor)
-     * @param int xPosition
-     * @param int yPosition
+     * und der farbe rot
      */
     public Tisch(int xPosition, int yPosition){
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
+
+        super(yPosition, xPosition);
         orientierung = 0;
         farbe = "rot";
-        istSichtbar = false;
         breite = 120;
         tiefe = 100;
     }
