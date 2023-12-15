@@ -1,10 +1,12 @@
+import java.awt.*;
+
 /**
  * Ueberklasse fuer alle Moebel, enthaelt die wichtigen funktionen, welche zum erstellen,
  * interagieren und graphisch darstellen notwendig sind.
  * @author Lukas
  * @version 1202312151018
  */
-public class Moebel {
+public abstract class Moebel {
 
     protected int xPosition;
     protected int yPosition;
@@ -14,6 +16,11 @@ public class Moebel {
     protected int breite;
     protected int tiefe;
 
+    /**
+     * Diese methode wird in den Unterklassen ueberschrieben, ist aber notwendig, weil Java
+     * sie an dieser Stelle verlangt.
+     */
+    protected abstract Shape gibAktuelleFigur();
     
     /**
      * Mache dieses Objekt sichtbar. Wenn es bereits sichtbar ist, tue nichts.
@@ -44,6 +51,7 @@ public class Moebel {
 
     /**
      * Bewege dieses Objekt horizontal um 'entfernung' Bildschirmpunkte.
+     * @param entfernung
      */
     public void bewegeHorizontal(int entfernung) {
         loesche();
@@ -113,7 +121,7 @@ public class Moebel {
      /**
      * Zeichne dieses Objekt mit seinen aktuellen Werten auf den Bildschirm.
      */
-    private void zeichne() {
+    protected void zeichne() {
         if (istSichtbar) {
             Shape figur = gibAktuelleFigur();
             Leinwand leinwand = Leinwand.gibLeinwand();
@@ -128,7 +136,7 @@ public class Moebel {
     /**
      * Loesche dieses Objekt vom Bildschirm.
      */
-    private void loesche() {
+    protected void loesche() {
         if (istSichtbar){
             Leinwand leinwand = Leinwand.gibLeinwand();
             leinwand.entferne(this);
